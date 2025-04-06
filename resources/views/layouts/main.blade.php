@@ -55,17 +55,30 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="{{route('page.index')}}">Home</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('page.about')}}"> About</a>
                         </li>
+                        @auth
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('page.tests')}}">Tests</a>
                         </li>
-                        <li class="nav-item">
+
+                            <li class="nav-item">
                             <a class="nav-link" href="{{route('page.posts')}}">Posts</a>
                         </li>
+                            <!-- Foydalanuvchi ismi -->
+                            <span class="ml-3">Salom, {{ Auth::user()->name }}</span>
+
+                            <!-- Logout tugmasi -->
+                            <form method="POST" action="{{ route('Auth.logout') }}" style="display:inline;">
+                                @csrf
+                                <button type="submit" class="btn btn-danger ml-2">Logout</button>
+                            </form>
+                        @endauth
+                        @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('login')}}">
+                            <a class="nav-link" href="{{route('Auth.loginpage')}}">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span>
                     Login
@@ -73,13 +86,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('register')}}">
+                            <a class="nav-link" href="{{route('Auth.register')}}">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span>
                     Sign Up
                   </span>
                             </a>
                         </li>
+                        @endguest
                         <form class="form-inline">
                             <button class="btn   nav_search-btn" type="submit">
                                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -192,16 +206,18 @@
                             About
                         </a>
                     </li>
+                    @auth
                     <li>
                         <a class="" href="{{route('page.tests')}}">
                             Testlar
                         </a>
                     </li>
                     <li>
-                        <a class="" href="freelancer.html">
+                        <a class="" href="{{route('page.posts')}}">
                             Po'stlar
                         </a>
                     </li>
+                    @endauth
                 </ul>
             </div>
             <div class="col-md-3">

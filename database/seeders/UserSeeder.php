@@ -16,30 +16,25 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $adminRole = Role::where('name', 'Admin')->first();
-        $editorRole = Role::where('name', 'Editor')->first();
+//        $editorRole = Role::where('name', 'Editor')->first();
         $userRole = Role::where('name', 'User')->first();
 
         User::create([
             'name' => 'Admin User',
             'email' => 'admin@example.com',
             'password' => Hash::make('password'),
-            'role_id' => $adminRole->id,
+            'role' => 'admin',
         ]);
 
-        User::create([
-            'name' => 'Editor User',
-            'email' => 'editor@example.com',
-            'password' => Hash::make('password'),
-            'role_id' => $editorRole->id,
-        ]);
+
 
         User::create([
             'name' => 'Regular User',
             'email' => 'user@example.com',
             'password' => Hash::make('password'),
-            'role_id' => $userRole->id,
+            'role' => 'user',
         ]);
 
-        User::factory()->count(10)->create();
+//        User::factory()->count(10)->create();
     }
 }

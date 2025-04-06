@@ -15,10 +15,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RoleSeeder::class,
             UserSeeder::class,
-            CategorySeeder::class,
-            TestSeeder::class,
-            PostSeeder::class,
-            CommentSeeder::class,
+//            CategorySeeder::class,
+//            TestSeeder::class,
+//            PostSeeder::class,
+//            CommentSeeder::class,
         ]);
     }
 }

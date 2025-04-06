@@ -113,7 +113,7 @@
             <a href="#" class="dropdown-toggle" id="adminDropdown">Admin</a>
             <ul class="dropdown-menu" id="dropdownMenu">
                 <li><a href="editProfile.html">Edit Profile</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="{{route('Auth.logout')}}">Logout</a></li>
             </ul>
         </div>
     </div>
