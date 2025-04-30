@@ -5,7 +5,7 @@
     <!-- Kategoriya Yaratish Formasi -->
     <div class="category-create-form">
 
-        <form action="{{ route('admin.categories.store') }}" method="POST">
+        <form action="{{ route('admin.category.store') }}" method="POST">
             @csrf
 
             <div class="form-group1">

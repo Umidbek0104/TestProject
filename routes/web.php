@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,10 +30,15 @@ require __DIR__.'/auth.php';
 
 Route::get('/',[PageController::class,'index'])->name('page.index');
 Route::get('/about',[PageController::class,'about'])->name('page.about');
-Route::get('/tests',[PageController::class,'tests'])->name('page.tests');
-Route::get('/posts',[PageController::class,'posts'])->name('page.posts');
 
 
+
+Route::middleware('auth')->group(function () {
+    Route::get('/tests',[PageController::class,'tests'])->name('page.tests');
+    Route::get('/posts',[PageController::class,'posts'])->name('page.posts');
+    Route::get('/work/tests',[TestController::class,'index'])->name('page.work.tests');
+    Route::post('/work/tests',[TestController::class,'submitTests'])->name('tests.submit');
+});
 
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
@@ -49,6 +55,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     // Categories
     Route::get('/all/categories', [AdminController::class, 'allCategories'])->name('admin.all.categories');
     Route::get('/category/create', [AdminController::class, 'createCategory'])->name('admin.category.create');
+    Route::post('/category/store', [AdminController::class, 'storeCategory'])->name('admin.category.store');
     Route::get('/category/{id}/edit', [AdminController::class, 'editCategory'])->name('admin.category.edit');
     Route::put('/category/{id}', [AdminController::class, 'updateCategory'])->name('admin.categories.update');
     Route::delete('/category/{id}/delete', [AdminController::class, 'deleteCategory'])->name('admin.category.delete');

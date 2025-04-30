@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Test;
 use App\Http\Requests\StoreTestRequest;
 use App\Http\Requests\UpdateTestRequest;
+use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
@@ -13,7 +14,25 @@ class TestController extends Controller
      */
     public function index()
     {
-        //
+        $tests = Test::inRandomOrder()->limit(10)->get(); // 10 ta random test
+        return view('work_tests', compact('tests'));
+    }
+    public function submitTests(Request $request)
+    {
+        $correct = 0;
+        $total = count($request->answers ?? []);
+
+        foreach ($request->answers ?? [] as $testId => $userAnswer) {
+            $test = Test::find($testId);
+            if ($test && $test->true_answer === $userAnswer) {
+                $correct++;
+            }
+        }
+
+        return view('doworking_test', [
+            'correct' => $correct,
+            'total' => $total
+        ]);
     }
 
     /**

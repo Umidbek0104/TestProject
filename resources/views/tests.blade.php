@@ -37,7 +37,7 @@
                             <button class="fav-btn">
                                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </button>
-                            <a href="" class="apply-btn">
+                            <a href="{{route('page.work.tests')}}" class="apply-btn">
                                 Ishlash
                             </a>
                         </div>
