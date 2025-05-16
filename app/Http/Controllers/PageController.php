@@ -30,4 +30,11 @@ class PageController extends Controller
         $posts=Post::all();
         return view('posts',compact('posts'));
     }
+    public function main()
+    {
+        $category=Category::all();
+        return view('layouts.main',compact('category'));
+    }
+
+
 }

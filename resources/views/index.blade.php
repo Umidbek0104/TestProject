@@ -37,13 +37,10 @@
                         </h2>
                     </div>
                     <p>
-                        Normal distribution of letters, as opposed to using 'Content here, content here', making it look like
-                        readable English. Many desktop publishing packages and web page editors has a more-or-less normal
-                        distribution of letters, as opposed to using 'Content here, content here', making it look like readable
-                        English. Many desktop publishing packages and web page editors
+                        Biz — zamonaviy texnologiyalar va kasb-hunar o‘rganishni istaganlar uchun mo‘ljallangan interaktiv onlayn ta’lim platformasimiz. Maqsadimiz — istalgan yoshdagi va darajadagi insonlarga sifatli, qulay va hamyonbop bilim olish imkoniyatini yaratish.
                     </p>
-                    <a href="">
-                        Read More
+                    <a href="{{route('page.about')}}">
+                        Batafsil
                     </a>
                 </div>
             </div>
@@ -102,7 +99,7 @@
                             <button class="fav-btn">
                                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </button>
-                            <a href="" class="apply-btn">
+                            <a href="{{$post->video_url}}" class="apply-btn">
                                 Ko'rish
                             </a>
                         </div>
@@ -167,12 +164,12 @@
     <div class="container">
         <div class="heading_container heading_center">
             <h2>
-                LOOKING FOR EXPERTS?
+                Bizning Ekspertlar
             </h2>
-            <p>
-                Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam nulla mauris
-                iaculis. Erat eget vitae malesuada, tortor tincidunt porta lorem lectus.
-            </p>
+{{--            <p>--}}
+{{--                Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam nulla mauris--}}
+{{--                iaculis. Erat eget vitae malesuada, tortor tincidunt porta lorem lectus.--}}
+{{--            </p>--}}
         </div>
         <div class="row">
             <div class="col-md-6 col-lg-4 mx-auto">
@@ -182,14 +179,14 @@
                     </div>
                     <div class="detail-box">
                         <a href="">
-                            Martin Anderson
+                            Azadov Ruslon
                         </a>
                         <h6 class="expert_position">
                 <span>
-                  Web Anaylzer
+                  Python
                 </span>
                             <span>
-                  41 Jobs Done
+                  41 Kurs foydalanuvchi
                 </span>
                         </h6>
                         <span class="expert_rating">
@@ -199,11 +196,11 @@
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
               </span>
-                        <p>
-                            Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam
-                            nulla
-                            mauris iaculis.
-                        </p>
+{{--                        <p>--}}
+{{--                            Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam--}}
+{{--                            nulla--}}
+{{--                            mauris iaculis.--}}
+{{--                        </p>--}}
                     </div>
                 </div>
             </div>
@@ -214,14 +211,14 @@
                     </div>
                     <div class="detail-box">
                         <a href="">
-                            Semanta Klores
+                            Malikda Jabbarova
                         </a>
                         <h6 class="expert_position">
                 <span>
                   Graphic Designer
                 </span>
                             <span>
-                  32 Jobs Done
+                  32 Kurs foydalanuvchi
                 </span>
                         </h6>
                         <span class="expert_rating">
@@ -231,11 +228,11 @@
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
               </span>
-                        <p>
-                            Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam
-                            nulla
-                            mauris iaculis.
-                        </p>
+{{--                        <p>--}}
+{{--                            Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam--}}
+{{--                            nulla--}}
+{{--                            mauris iaculis.--}}
+{{--                        </p>--}}
                     </div>
                 </div>
             </div>
@@ -246,14 +243,14 @@
                     </div>
                     <div class="detail-box">
                         <a href="">
-                            Ryan Martines
+                           Sadullayev Omonboy
                         </a>
                         <h6 class="expert_position">
                 <span>
-                  SEO Expert
+                  Video Mantaj
                 </span>
                             <span>
-                  27 Jobs Done
+                  27 Kurs foydalanuvchisi
                 </span>
                         </h6>
                         <span class="expert_rating">
@@ -263,11 +260,11 @@
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <i class="fa fa-star" aria-hidden="true"></i>
               </span>
-                        <p>
-                            Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam
-                            nulla
-                            mauris iaculis.
-                        </p>
+{{--                        <p>--}}
+{{--                            Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam--}}
+{{--                            nulla--}}
+{{--                            mauris iaculis.--}}
+{{--                        </p>--}}
                     </div>
                 </div>
             </div>

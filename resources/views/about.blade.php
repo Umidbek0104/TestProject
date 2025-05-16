@@ -10,14 +10,11 @@
                     <div class="detail-box">
                         <div class="heading_container">
                             <h2>
-                                About Us
+                                Biz haqimizda
                             </h2>
                         </div>
                         <p>
-                            Normal distribution of letters, as opposed to using 'Content here, content here', making it look like
-                            readable English. Many desktop publishing packages and web page editors has a more-or-less normal
-                            distribution of letters, as opposed to using 'Content here, content here', making it look like readable
-                            English. Many desktop publishing packages and web page editors
+                            Biz — zamonaviy texnologiyalar va kasb-hunar o‘rganishni istaganlar uchun mo‘ljallangan interaktiv onlayn ta’lim platformasimiz. Maqsadimiz — istalgan yoshdagi va darajadagi insonlarga sifatli, qulay va hamyonbop bilim olish imkoniyatini yaratish.
                         </p>
                         <a href="">
                             Read More

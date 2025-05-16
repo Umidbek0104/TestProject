@@ -32,7 +32,6 @@ Route::get('/',[PageController::class,'index'])->name('page.index');
 Route::get('/about',[PageController::class,'about'])->name('page.about');
 
 
-
 Route::middleware('auth')->group(function () {
     Route::get('/tests',[PageController::class,'tests'])->name('page.tests');
     Route::get('/posts',[PageController::class,'posts'])->name('page.posts');

@@ -8,11 +8,11 @@
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Site Metas -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="keywords" content="online courses, education" />
+    <meta name="description" content="OmonboyPr - Online kurslar platformasi" />
+    <meta name="author" content="OmonboyPr" />
 
-    <title>Hirevac</title>
+    <title>OmonboyPr - Onlayn Kurslar</title>
 
 
     <!-- bootstrap core css -->
@@ -42,9 +42,9 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg custom_nav-container ">
                 <a class="navbar-brand" href="{{route('page.index')}}">
-            <span>
-              Hirevac
-            </span>
+                    <span>
+                      OmonboyPr - Onlayn Kurslar
+                    </span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,46 +54,46 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav  ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{route('page.index')}}">Home</a>
+                            <a class="nav-link" href="{{route('page.index')}}">Asosiy</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('page.about')}}"> About</a>
+                            <a class="nav-link" href="{{route('page.about')}}">Biz haqimizda</a>
                         </li>
                         @auth
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('page.tests')}}">Tests</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('page.tests')}}">Testlar</a>
+                            </li>
 
                             <li class="nav-item">
-                            <a class="nav-link" href="{{route('page.posts')}}">Posts</a>
-                        </li>
+                                <a class="nav-link" href="{{route('page.posts')}}">Postlar</a>
+                            </li>
                             <!-- Foydalanuvchi ismi -->
                             <span class="ml-3">Salom, {{ Auth::user()->name }}</span>
 
                             <!-- Logout tugmasi -->
                             <form method="POST" action="{{ route('Auth.logout') }}" style="display:inline;">
                                 @csrf
-                                <button type="submit" class="btn btn-danger ml-2">Logout</button>
+                                <button type="submit" class="btn btn-danger ml-2">Chiqish</button>
                             </form>
                         @endauth
                         @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('Auth.loginpage')}}">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span>
-                    Login
-                  </span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('Auth.register')}}">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span>
-                    Sign Up
-                  </span>
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('Auth.loginpage')}}">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>
+                                    Kirish
+                                </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('Auth.register')}}">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>
+                                    Ro'yxatdan o'tish
+                                </span>
+                                </a>
+                            </li>
                         @endguest
                         <form class="form-inline">
                             <button class="btn   nav_search-btn" type="submit">
@@ -113,12 +113,11 @@
                 <div class="col-lg-7 col-md-8 mx-auto">
                     <div class="detail-box">
                         <h1>
-                            Build Your <br>
-                            POWERFUL CAREER
+                            Onlayn Kurslaringizni <br>
+                            Yarating va O'rgating
                         </h1>
                         <p>
-                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                            distribution of letters, as opposed to
+                            Bizning platformamizda, har qanday soha bo'yicha onlayn kurslarni yaratish va o'rgatish imkoniyatiga ega bo'lasiz. O'z bilimlaringizni baham ko'ring!
                         </p>
                     </div>
                 </div>
@@ -130,27 +129,18 @@
                             <form>
                                 <div class="form-row ">
                                     <div class="form-group col-lg-3">
-                                        <input type="text" class="form-control" id="inputPatientName" placeholder="Keywords">
+                                        <input type="text" class="form-control" id="inputCourseName" placeholder="Kurs nomi yoki so'zlar">
                                     </div>
                                     <div class="form-group col-lg-3">
-                                        <select name="" class="form-control wide" id="inputDoctorName">
-                                            <option value="Normal distribution ">All Locations</option>
-                                            <option value="Normal distribution ">Location 2 </option>
-                                            <option value="Normal distribution ">Location 3 </option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-lg-3">
-                                        <select name="" class="form-control wide" id="inputDepartmentName">
-                                            <option value="Normal distribution ">SEO Expert </option>
-                                            <option value="Normal distribution ">Web Designer </option>
-                                            <option value="Normal distribution ">Web Developer</option>
-                                            <option value="Normal distribution ">Graphic Deesigner</option>
-                                            <option value="Normal distribution ">Content Writer</option>
+                                        <select name="" class="form-control wide" id="inputCategoryName">
+{{--                                            @foreach($category as $cate)--}}
+                                                <option value="Test">Test</option>
+{{--                                            @endforeach--}}
                                         </select>
                                     </div>
                                     <div class="form-group col-lg-3">
                                         <div class="btn-box">
-                                            <button type="submit" class="btn ">Submit Now</button>
+                                            <button type="submit" class="btn ">Qidirish</button>
                                         </div>
                                     </div>
                                 </div>
@@ -161,19 +151,19 @@
                         <li class=" ">
                             <input id="checkbox_qu_01" type="checkbox" class="styled-checkbox">
                             <label for="checkbox_qu_01">
-                                Freelancer
+                                Bepul Kurslar
                             </label>
                         </li>
                         <li class=" ">
                             <input id="checkbox_qu_02" type="checkbox" class="styled-checkbox">
                             <label for="checkbox_qu_02">
-                                Part Time
+                                Pul uchun Kurslar
                             </label>
                         </li>
                         <li class=" ">
                             <input id="checkbox_qu_03" type="checkbox" class="styled-checkbox">
                             <label for="checkbox_qu_03">
-                                Full Time
+                                Sertifikatli Kurslar
                             </label>
                         </li>
                     </ul>
@@ -183,7 +173,6 @@
     </section>
     <!-- end slider section -->
 </div>
-
 
 @yield('content')
 
@@ -199,41 +188,40 @@
                 <ul>
                     <li class="active">
                         <a href="{{route('page.index')}}">
-                            Home
+                            Asosiy
                         </a>
                     </li>
                     <li>
                         <a href="{{route('page.about')}}">
-                            About
+                            Biz haqimizda
                         </a>
                     </li>
                     @auth
-                    <li>
-                        <a class="" href="{{route('page.tests')}}">
-                            Testlar
-                        </a>
-                    </li>
-                    <li>
-                        <a class="" href="{{route('page.posts')}}">
-                            Po'stlar
-                        </a>
-                    </li>
+                        <li>
+                            <a class="" href="{{route('page.tests')}}">
+                                Testlar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="" href="{{route('page.posts')}}">
+                                Postlar
+                            </a>
+                        </li>
                     @endauth
                 </ul>
             </div>
             <div class="col-md-3">
                 <h4>
-                    Jobs
+                    Onlayn Kurslar
                 </h4>
                 <p>
-                    Established fact that a reader will be distracted by the readable content of a page when looking at its
-                    layout. The point of using Lorem Ipsum
+                    Onlayn kurslar yordamida siz o'z bilimlaringizni ko'plab talabalarga etkazishingiz mumkin. Kurslarni yaratish va boshqarishning eng oson yo'li.
                 </p>
             </div>
             <div class="col-md-3">
                 <div class="info_social">
                     <h4>
-                        Social Link
+                        Ijtimoiy tarmoqlar
                     </h4>
                     <div class="social_container">
                         <div>
@@ -262,12 +250,12 @@
             <div class="col-md-4">
                 <div class="info_form">
                     <h4>
-                        Newsletter
+                        Yangiliklar uchun obuna bo'ling
                     </h4>
                     <form action="">
-                        <input type="text" placeholder="Enter Your Email" />
+                        <input type="text" placeholder="Email manzilingizni kiriting" />
                         <button type="submit">
-                            Subscribe
+                            Obuna bo'lish
                         </button>
                     </form>
                 </div>
